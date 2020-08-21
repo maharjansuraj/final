@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Map</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/responsive.css" type="text/css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <style>
+
+
+          h2          {
+                      background-color: aliceblue;
+                      border: 1px solid blue;
+                      }
+
+          #mymap      {
+                      width: 700px;
+                      height: 500px;
+                      margin: auto;
+                      }
+
+          #maincontent {
+                        background-color: aliceblue;
+                        border: 1px solid blue;
+                        width: 720px;
+                        height: 520px;
+                        margin: auto;
+                        padding-top: 10px;
+                        }
+      </style>
+      <script>
+              function initialize(){
+              var opt = {
+              zoom: 5,
+              center: new google.maps.LatLng(34.401430, 132.452613),
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+              var mm = document.getElementById("mymap");
+              map = new google.maps.Map(mm, opt);
+              var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(34.401430, 132.452613),
+              map: map,
+              title: "Hiroshima"
+                                                  });
+              var info= new google.maps.InfoWindow({
+              content: "<img src='img/hirosima.jpg' width='120px' height='100px'><br/> <h3>Hiroshima</h3> Hiroshima is Hiroshima Prefecture, located in the western part of the city. It is the prefectural capital of Hiroshima Prefectural capital ofHiroshima and is a government designated city. The population is about 1,199,000."
+                                                  });
+
+
+              var marker1 = new google.maps.Marker({
+              position: new google.maps.LatLng(32.776595, 129.864154),
+              map: map,
+              title: "Nagasaki"
+                                                  });
+              var info1= new google.maps.InfoWindow({
+              content: "<img src='img/nagasaki.jpeg' width='120px' height='100px'><br/> <h3>Nagasaki</h3> Nagasaki is Nagasaki Prefecture, located in the middle of the city. It is the prefecture capital of Nagasaki Prefecture and is designated as a core city."
+                                                    });
+
+              var marker2= new google.maps.Marker({
+              position:new google.maps.LatLng(35.095610, 135.725660),
+              map: map,
+              title: "Kyoto"
+                                                  });
+              var info2= new google.maps.InfoWindow({
+              content: "<img src='img/kyoto.jpg' width='120px' height='100px'><br/><h3> Kyoto </h3> Kyoto is a city located in the southern part of Kyoto prefecture. It has the eigth larget population in JAPAN. In the city 794 years St. from 1869 Tokyo transferring the capital for more than 1000 years to the capital of Japan as Heian-kyo order has been placed called the ancient city."
+                                                    });
+
+              var marker3= new google.maps.Marker({
+              position:new google.maps.LatLng(35.758518, 139.774652),
+              map: map,
+              title: "Tokyo"
+                                                  });
+              var info3= new google.maps.InfoWindow({
+              content: "<img src='img/tokyo.jpg' width='120px' height='100px'><br/><h3> Tokyo </h3> The current capital of Japan is Tokyo. In the course of history, the national capital has been in many locations other than Tokyo."
+                                                    });
+              google.maps.event.addListener(marker, "click", function(){info.open(map,marker);});
+              google.maps.event.addListener(marker1, "click", function(){info1.open(map,marker1);});
+              google.maps.event.addListener(marker2, "click", function(){info2.open(map,marker2);});
+              google.maps.event.addListener(marker3, "click", function(){info3.open(map,marker3);});
+
+                                          }
+              google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        <link href="flexslider.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body id="main">
+     <div id="topbar">
+          <input style="background-color:red" type="button" value="red" onclick="changeCss(1)" />
+          <input style="background-color:blue" type="button" value="red" onclick="changeCss(2)" />
+          <input style="background-color:coral" type="button" value="coral" onclick="changeCss(3)" />
+          <input style="background-color:yellow" type="button" value="yellow" onclick="changeCss(4)" />
+      </div>
+      <div id="bodypage">
+
+      <header>
+            <div id="navhead">
+                <nav>
+                      <ul>
+                          <li><a href="index.html">Top page</a></li>
+                          <li><a href="js1.html"> Score</a></li>
+                          <li><a href="js2.html"> Shop</a></li>
+                          <li><a href="js3.html"> JS World</a></li>
+                          <li><a href="js4.html"> Form</a></li>
+                          <li><a href="js5.html"> Map</a></li>
+                          <li><a href="js6.html"> Anima</a></li>
+                      </ul>
+                </nav>
+            </div>
+       </header>
+
+       <div id="banner" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                        <img src="img/everest.jpg" alt="banner-bg">
+                    <div class="carousel-caption d-none d-md-block">
+                         <h5>Mount Everest</h5>
+
+                    </div>
+              </div>
+                    <div class="carousel-item">
+                        <img src="img/stupa.jpg" alt="banner-bg">
+                    <div class="carousel-caption d-none d-md-block">
+                          <h5>Stupa</h5>
+
+                    </div>
+                    </div>
+              <div class="carousel-item">
+                          <img src="img/kalinchowk.jpg" alt="banner-bg">
+                    <div class="carousel-caption d-none d-md-block">
+                          <h5>Kalinchowk</h5>
+                    </div>
+              </div>
+
+              <div class="carousel-item">
+                          <img src="img/sukute.jpeg" alt="banner-bg">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>Sukute Beach</h5>
+
+                      </div>
+              </div>
+
+              <div class="carousel-item">
+                          <img src="img/jiri.jpeg" alt="banner-bg">
+                      <div class="carousel-caption d-none d-md-block">
+                          <h5>Jiri</h5>
+                      </div>
+               </div>
+
+             </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+              </a>
+        </div>
+        <div id="content">
+              <h2> Location Marker</h2>
+			         <div id="maincontent">
+    	               <div id="mymap">
+			               </div>
+		           </div>
+         </div>
+
+
+    <footer>
+      &copy; 2020 MAHARJAN SURAJ
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  <script>
+        function changeCss(btnno)
+        {
+        if(btnno == "1"){
+        document.getElementById('bodypage').style.backgroundColor="red";
+        }else if(btnno == "2"){
+        document.getElementById('bodypage').style.backgroundColor="blue";
+        }else if(btnno == "3"){
+        document.getElementById('bodypage').style.backgroundColor="coral";
+        }else if(btnno == "4"){
+        document.getElementById('bodypage').style.backgroundColor="yellow";
+        }else{
+        }
+        }
+    </script>
+
+
+</body>
+</html>

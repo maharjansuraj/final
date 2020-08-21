@@ -1,0 +1,50 @@
+
+@media  print, screen and (max-width:640px{
+  body {
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  #bodypage {
+    width: 99%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1%;
+    backgroun-color: lightcyan;
+  }
+
+  header {
+    width: 94%;
+    height: 30px;
+    margin 3px;
+    background-color: purple;
+  }
+
+  
+
+  a {
+    text-decoration: none;
+  }
+
+  #content {
+    width: 80%;
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid coral;
+    background-color: purple;
+  }
+
+  footer {
+    width: 94%;
+    margin: 3px;
+    padding: 3px;
+    border: 1px solid coral;
+  }
+
+}
+

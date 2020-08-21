@@ -1,0 +1,22 @@
+
+a {text-decoration:none;}
+
+#maincontent{
+	width:550px;
+	height:450px;
+	margin:10px;
+	margin-left: 275px;
+	padding:10px;
+	border:2px solid blue;
+	background-color:pink;
+}
+
+#display {
+	float:left;
+	margin-left: 5px;
+}
+
+#mainphoto {
+	width: 98%;
+	height: 98%;
+}
